@@ -1,6 +1,20 @@
-# Homebrew Tap
+<h1 align="center">
+  <br>
+  nficano/tap
+  <br>
+</h1>
 
-Homebrew formulae for [nficano](https://github.com/nficano) projects.
+<p align="center">
+  <b>Homebrew formulae for <a href="https://github.com/nficano">nficano</a> projects.</b>
+</p>
+
+<p align="center">
+  <a href="#installation">Installation</a> &bull;
+  <a href="#formulae">Formulae</a> &bull;
+  <a href="#troubleshooting">Troubleshooting</a>
+</p>
+
+---
 
 ## Installation
 
@@ -8,37 +22,51 @@ Homebrew formulae for [nficano](https://github.com/nficano) projects.
 brew tap nficano/tap
 ```
 
-## Available Formulae
-
-| Formula | Description |
-|---------|-------------|
-| [debaser](https://github.com/nficano/debaser) | Deterministic release name generator |
-| [github-runner](https://github.com/nficano/github-runner) | Self-hosted GitHub Actions runner |
+## Formulae
 
 ### debaser
+
+> Deterministic release name generator that converts a Git SHA or checksum into a friendly, alliterative adjective-noun name.
 
 ```sh
 brew install nficano/tap/debaser
 ```
 
-For more details, see the [debaser documentation](https://github.com/nficano/debaser).
+```sh
+$ debaser --sha HEAD
+snappy-sable
+```
+
+[Documentation](https://github.com/nficano/debaser) · [Releases](https://github.com/nficano/debaser/releases)
+
+---
 
 ### github-runner
+
+> Self-hosted GitHub Actions runner with first-class macOS and Linux support, managed entirely through a single config file.
 
 ```sh
 brew install nficano/tap/github-runner
 ```
 
-After installation, edit the config with your GitHub token:
+After installation, configure your GitHub token and start the service:
 
 ```sh
 $EDITOR $(brew --prefix)/etc/github-runner/config.toml
-```
-
-Start as a background service:
-
-```sh
 brew services start github-runner
 ```
 
-For more details, see the [github-runner documentation](https://github.com/nficano/github-runner).
+[Documentation](https://github.com/nficano/github-runner) · [Releases](https://github.com/nficano/github-runner/releases)
+
+---
+
+## Troubleshooting
+
+If a formula fails to install, ensure the tap is up to date:
+
+```sh
+brew update
+brew upgrade nficano/tap/<formula>
+```
+
+To report issues, open an issue on the relevant project repository.
