@@ -12,7 +12,16 @@ brew tap nficano/tap
 
 | Formula | Description |
 |---------|-------------|
+| [debaser](https://github.com/nficano/debaser) | Deterministic release name generator |
 | [github-runner](https://github.com/nficano/github-runner) | Self-hosted GitHub Actions runner |
+
+### debaser
+
+```sh
+brew install nficano/tap/debaser
+```
+
+For more details, see the [debaser documentation](https://github.com/nficano/debaser).
 
 ### github-runner
 
